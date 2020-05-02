@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+/*Ventana Modal*/
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, .452);
+}
+
+.modal{
+    display: none;
+    position: absolute;
+    z-index: 300;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.container-modal{
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    width: 40%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    animation: modal 1s;
+}
+
+.modal-header{
+    width: 100%;
+    padding: 8px 16px;
+    position: relative;
+    display: inline-flex;
+    text-align: center;
+    background-color: #7ed6df;
+}
+
+h2{
+    font-size: 35px;
+    color: #d8d8d8;
+    text-shadow: 5px 8px 15px rgb(104, 104, 104);
+}
+
+.close{
+    padding: 5px 0 0 0 ;
+    font-size: 30px;
+    position: absolute;
+    margin-left: 90%;
+    color: antiquewhite;
+    transition: all .6s ease;
+}
+
+.close:hover{
+    color: #707070;
+    cursor: pointer;
+}
+
+.modal-body{
+    padding: 20px 16px;
+    text-align: center;
+    border-bottom: 2px solid #9b9b9b;
+}
+
+.excla{
+    font-size: 70px;
+    color: #61b4bd;
+    margin-bottom: 20px;
+}
+
+.modal-body p{
+    font-weight: 400;
+    color: #000;
+    font-size: 18px;
+    font-family: 'Jomolhari';
+}
+
+.modal-footer{
+    padding: 8px 16px;
+}
+
+.modal-footer button{
+    margin-left: 85%;
+    background-color: #0fc0bd;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes modal{
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+/*Inputs*/
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30%;
+}
+
+.buttons{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.buttons button{
+    padding: 10px;
+    background-color: #1fa5a5;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 1px 10px 15px #0fc0bd;
+    cursor: pointer;
+}
+
+h1{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Jomolhari', sans-serif;
+    font-weight: 700;
+    color: #70dbdb;
+    text-shadow: 5px 8px 15px #82f8f8;
+}
+
+.form{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.form input{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    padding: 5px;
+    margin-left: 10px;
+    border: none;
+    font-size: 40px;
+    text-align: center;
+    background-color: transparent;
+    color: #0fc0bd;
+    border-bottom: 3px solid #707070;
+    transition: all .5s ease;
+}
+
+.form input:focus{
+    outline: none;
+    border-bottom: 3px solid #83f8f8;
+}
+
+.verify{
+    margin-top: 25px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0fc0bd;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+}
+
+/*Table*/
+.table{
+    width: 600px;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    top: -13pc;
+    left: 50%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+table{
+    background-color: #fff;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    padding: 20px;
+}
+
+thead{
+    background-color: #0fc0bd;
+    border-bottom:2px solid #057c7a;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+tbody tr{
+    padding: 20px;
+}
+
+.message{
+    margin-left: 25px;
+    font-size: 33px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #057c7a;
+    position: relative;
+    z-index: 3;
+}
+
+.number{
+    margin-left: 25px;
+    width: 10%;
+    border-radius: 5px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    float: right;
+    margin-right: 350px;
+    background-color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}

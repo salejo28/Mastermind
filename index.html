@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jomolhari&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/7244f7bc2d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1 class="title">Mastermind</h1>
+    <div class="container">
+        <div class="buttons">
+            <button id="generate">Generar</button>
+            <button id="reset">Reintentar</button>
+        </div>
+        <form class="form">
+            <input type="text" name="" id="input1" maxlength="1">
+            <input type="text" name="txt" id="input2" maxlength="1">
+            <input type="text" name="" id="input3" maxlength="1">
+            <input type="text" name="" id="input4" maxlength="1">
+            <button type="submit" class="verify" id="verify">Verificar</button>
+        </form>
+    </div>
+
+    <h1 id="message" class="message"></h1>
+    <div class="number" id="number">
+        
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Intento</th>
+                    <th>Numero</th>
+                    <th>Acertados</th>
+                    <th>Colocados</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="flex">
+            <div class="container-modal">
+                <div class="modal-header">
+                    <h2>Instrucciones de Mastermind</h2>
+                    <i class="fas fa-times close" id="close"></i>
+                </div>
+                <div class="modal-body">
+                    <i class="fas fa-exclamation excla"></i>
+                    <p>
+                        La idea del juego es adivinar los numeros secretos, te vamos a dar 5 intentos para que lo logres
+                        y te vamos a ir indicando cuantos estan acertados y cuantos colocados, <b>Ejemplo:</b> <br>
+                        <b>Numero:</b> 1234 <br>
+                        <b>Intento 1:</b> 1432 enconces se dice 4 acertados colocados 2 <br>
+                        Para generar los numeros dale en el boton <b>Generar</b>, y para volverlo a intentar dale en el bonot <b>reintentar</b>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button id="acept">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--onkeyup="if (this.value.length == this.getAttribute('maxlength')) txt.focus()"-->
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
